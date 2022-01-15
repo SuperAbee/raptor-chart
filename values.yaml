@@ -9,7 +9,7 @@ labels: {app: raptor}
 replicaCount: 1
 
 image:
-  name: superabee/raptor:v0
+  name: superabee/raptor:latest
   pullPolicy: Always
 
 imagePullSecrets: []

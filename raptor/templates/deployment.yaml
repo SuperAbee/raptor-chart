@@ -6,14 +6,19 @@ spec:
   replicas: {{ .Values.replicaCount }}
   selector:
     matchLabels:
-      {{- toYaml .Values.labels | nindent 6 }}
+      scheduler
   template:
     metadata:
       labels:
-        {{- toYaml .Values.labels | nindent 8 }}
+        scheduler
     spec:
       serviceAccountName: {{ include "raptor.serviceAccountName" . }}
       containers:
         - name: {{ .Chart.Name }}
           image: {{ .Values.image.name }}
           imagePullPolicy: {{ .Values.image.pullPolicy }}
+          env: 
+          - name: SERVICE_CENTER
+            value: k8s
+          - name: CONFIG_CENTER
+            value: k8s

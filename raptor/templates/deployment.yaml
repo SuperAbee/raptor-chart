@@ -6,11 +6,11 @@ spec:
   replicas: {{ .Values.replicaCount }}
   selector:
     matchLabels:
-      scheduler
+      app: scheduler
   template:
     metadata:
       labels:
-        scheduler
+        app: scheduler
     spec:
       serviceAccountName: {{ include "raptor.serviceAccountName" . }}
       containers:

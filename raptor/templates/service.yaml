@@ -6,7 +6,7 @@ metadata:
     app: scheduler
 spec:
   selector:
-    {{- toYaml .Values.labels | nindent 4 }}
+    app: scheduler
   type: NodePort
   ports:
   - port: 1234

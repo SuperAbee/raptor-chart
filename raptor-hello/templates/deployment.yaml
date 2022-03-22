@@ -10,7 +10,7 @@ spec:
   template:
     metadata:
       labels:
-        raptor-hello
+        app: raptor-hello
     spec:
       containers:
         - name: raptor-hello

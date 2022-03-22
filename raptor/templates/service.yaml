@@ -7,6 +7,6 @@ spec:
     {{- toYaml .Values.labels | nindent 4 }}
   type: NodePort
   ports:
-  - port: 8089
-    targetPort: 8089
+  - port: 1234
+    targetPort: 1234
     nodePort: 30002

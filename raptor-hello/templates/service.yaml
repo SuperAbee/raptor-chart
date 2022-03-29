@@ -13,7 +13,3 @@ spec:
     port: 8878
     targetPort: 8878
     nodePort: 30001
-  - name: prometheus
-    port: 8877
-    targetPort: 8877
-    nodePort: 30000

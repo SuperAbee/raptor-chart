@@ -9,6 +9,11 @@ spec:
     app: scheduler
   type: NodePort
   ports:
-  - port: 1234
+  - name: raptor
+    port: 1234
     targetPort: 1234
     nodePort: 30002
+  - name: prometheus
+    port: 8877
+    targetPort: 8877
+    nodePort: 30000
